@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="157630dd-4fb8-49d0-9791-f8bbf6a5b1ff" name="Changes" comment="Added Welcome script">
+      <change afterPath="$PROJECT_DIR$/game/gameWindow.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/sprites/archipelago.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/sprites/drawings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/sprites/island.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "voudgai"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/voudgai/HeightGame.git",
+    "accountId": "daf93dad-a250-453c-9bad-7132e48494c4"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2oXbIq5wikpLmn71CR44NTGkOuM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.game.executor": "Run",
+    "Python.gameWindow.executor": "Run",
+    "Python.grid.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.settings.executor": "Run",
+    "Python.sprites.executor": "Run",
+    "Python.welcome.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Admin/Documents/ETF/Internship - Prakse/Nordeus challenge 2024/Full-Stack-Challenge/Full-stack/HeightGame",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Documents\ETF\Internship - Prakse\Nordeus challenge 2024\Full-Stack-Challenge\Full-stack\HeightGame" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Documents\ETF\Internship - Prakse\Nordeus challenge 2024\Full-Stack-Challenge\Full-stack\HeightGame\game\sprites" />
+      <recent name="C:\Users\Admin\Documents\ETF\Internship - Prakse\Nordeus challenge 2024\Full-Stack-Challenge\Full-stack\HeightGame\game" />
+      <recent name="C:\Users\Admin\Documents\ETF\Internship - Prakse\Nordeus challenge 2024\Full-Stack-Challenge\Full-stack\HeightGame" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23726.102" />
+        <option value="bundled-python-sdk-5e1850174b45-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23726.102" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="157630dd-4fb8-49d0-9791-f8bbf6a5b1ff" name="Changes" comment="" />
+      <created>1731018790366</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731018790366</updated>
+      <workItem from="1731019147359" duration="28895000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added Welcome script">
+      <option name="closed" value="true" />
+      <created>1731019549875</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731019549875</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added Welcome script" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Welcome script" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/HeightGame$grid.coverage" NAME="grid Coverage Results" MODIFIED="1731110669110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
+    <SUITE FILE_PATH="coverage/HeightGame$game.coverage" NAME="game Coverage Results" MODIFIED="1731110821348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
+    <SUITE FILE_PATH="coverage/HeightGame$sprites.coverage" NAME="sprites Coverage Results" MODIFIED="1731108712944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
+    <SUITE FILE_PATH="coverage/HeightGame$settings.coverage" NAME="settings Coverage Results" MODIFIED="1731101282729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
+    <SUITE FILE_PATH="coverage/HeightGame$main.coverage" NAME="main Coverage Results" MODIFIED="1731022653340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/HeightGame$gameWindow.coverage" NAME="gameWindow Coverage Results" MODIFIED="1731111264045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
+  </component>
+</project>
