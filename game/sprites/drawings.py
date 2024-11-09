@@ -2,14 +2,19 @@ from ..settings import *
 from abc import ABC, abstractmethod
 
 class Drawing:
-    def __init__(self, x, y, image):
+    def __init__(self, x, y, image, radius):
         self.x = x
         self.y = y
+        self.R = radius
         self.image = image
 
     def draw(self, board_surface):
         board_surface.blit(self.image, (self.x, self.y))
 
+    def overlaps(self, otherDrawing):
+        dx = abs(self.x - otherDrawing.x)
+        dy = abs(self.y - otherDrawing.y)
+        return bool(pow(pow(dx, 2) + pow(dy, 2), 1/2) < min(self.R, otherDrawing.R))
 class ColouredCellBorder(Drawing, ABC):
     def __init__(self, x, y, image):
         pass
@@ -25,26 +30,26 @@ class RedCellBorder(Drawing):
         if not 0 <= SIDE <= 15:
             print("SIDE must be between 0 and 15, example: SIDE = SIDE_UP | SIDE_RIGHT, if you want red line which goes down and right")
             pass
-        Drawing.__init__(self, x, y, red_lines_images[SIDE])
+        Drawing.__init__(self, x, y, red_lines_images[SIDE], 0)
 
 class Ship(Drawing):
     def __init__(self, x, y):
-        Drawing.__init__(self, x * TILESIZE, y * TILESIZE, ship_image)
+        Drawing.__init__(self, x * TILESIZE, y * TILESIZE, ship_images[random.randint(0,3)], SHIP_HEIGHT * 1.5 // 1)
 
 class Boat(Drawing):
     def __init__(self, x, y):
-        Drawing.__init__(self, x * TILESIZE, y * TILESIZE, boat_image)
+        Drawing.__init__(self, x * TILESIZE, y * TILESIZE, boat_image, BOAT_HEIGHT * 1.5 // 1)
 class Flag(Drawing):
     def __init__(self, x, y):
-        Drawing.__init__(self, x * TILESIZE, y * TILESIZE, flag_image)
+        Drawing.__init__(self, x * TILESIZE, y * TILESIZE, flag_image, TILESIZE)
 
 class Tree(Drawing):
     def __init__(self, x, y):
-        Drawing.__init__(self, x * TILESIZE, y * TILESIZE, tree_image)
+        Drawing.__init__(self, x * TILESIZE, y * TILESIZE, tree_image, TILESIZE)
 
 class Palm(Drawing):
     def __init__(self, x, y):
-        Drawing.__init__(self, x * TILESIZE, y * TILESIZE, palm_image)
+        Drawing.__init__(self, x * TILESIZE, y * TILESIZE, palm_image, TILESIZE)
 
 
 class Terrain(Drawing):
@@ -52,7 +57,7 @@ class Terrain(Drawing):
         x, y = x * TILESIZE, y * TILESIZE
         self.height = height
         self.image = height_levels_images[getHeightLevel(self.height)]
-        Drawing.__init__(self, x, y, self.image)
+        Drawing.__init__(self, x, y, self.image, TILESIZE)
 
     def __repr__(self):
         return self.height

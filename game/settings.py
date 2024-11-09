@@ -5,6 +5,7 @@ import requests
 import sys
 import os
 
+GET_REQ_LINK = "https://jobfair.nordeus.com/jf24-fullstack-challenge/test"
 
 BGCOLOUR = (0, 0, 0)
 WHITE = (255, 255, 255)
@@ -23,19 +24,26 @@ TILESIZE = 16
 ROWS = 30
 COLS = 30
 FPS = 60
+
 WIDTH = COLS * TILESIZE
 HEIGHT = TILESIZE * ROWS
-TITLE = "Monteverest"
+WINDOW_WIDTH = WIDTH + 200
+WINDOW_HEIGHT = HEIGHT + 200
+
+MAP_OFFSET_X = 100
+MAP_OFFSET_Y = 100
+
+TITLE = "Top Hill"
 
 HEIGHT_LEVELS_NUM = 9
-height_levels = [0,50,150,300,450,650,800,950,1000]
+height_levels = [0,50,200,300,450,650,800,950,1000]
 
 def getHeightLevel(height):
     if height == 0:
         return 0
     if height <= 50:
         return 1
-    if height <= 150:
+    if height <= 200:
         return 2
     if height <= 300:
         return 3
@@ -63,7 +71,9 @@ boat_image = pygame.transform.scale(pygame.image.load(os.path.join("../assets", 
 NUM_OF_SHIPS = random.randint(1,9)
 SHIP_WIDTH = int(TILESIZE * 2)
 SHIP_HEIGHT = int(TILESIZE * 2)
-ship_image = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "ship.png")), (SHIP_HEIGHT, SHIP_WIDTH))
+ship_images = []
+for i in range(1,5):
+    ship_images.append(pygame.transform.scale(pygame.image.load(os.path.join("../assets", f"ship{i}.png")), (SHIP_HEIGHT, SHIP_WIDTH)))
 
 flag_image = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "flag.png")), (TILESIZE * 2, TILESIZE * 2))
 tree_image = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "tree.png")), (TILESIZE * 2, TILESIZE * 2))

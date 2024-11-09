@@ -1,3 +1,5 @@
+from game import randomIslandGenerator
+from game.randomIslandGenerator import RandomIslandGenerator
 from game.sprites.archipelago import *
 
 class Game:
@@ -5,20 +7,24 @@ class Game:
         pygame.init()  # Initialize pygame
         self.rows = ROWS
         self.cols = COLS
-        self.winWidth = WIDTH
-        self.winHeight = HEIGHT
+        self.winWidth = WINDOW_WIDTH
+        self.winHeight = WINDOW_HEIGHT
         self.running = True
 
         self.window = pygame.display.set_mode((self.winWidth, self.winHeight))
         pygame.display.set_caption(TITLE)
         self.clock = pygame.time.Clock()
 
-    def new(self):
-        self.board = Archipelago(requests.get("https://jobfair.nordeus.com/jf24-fullstack-challenge/test").text)
-        #self.board.display_board()
+        self.mapFromNordeus = True
 
-    def __str__(self):
-        return f"Grid which has {self.rows} rows and {self.cols} cols, winSize = {self.winWidth} x {self.winHeight}"
+
+    def new(self):
+        if self.mapFromNordeus:
+            self.boardArchipelago = Archipelago(requests.get(GET_REQ_LINK).text)
+        else:
+            self.boardArchipelago = Archipelago(RandomIslandGenerator.generate_distinct_islands_map(30,1000,10))
+        self.mapFromNordeus = not self.mapFromNordeus
+
 
     def run(self):
         self.running = True
@@ -33,15 +39,30 @@ class Game:
             if event.type == pygame.QUIT:
                 self.running = False
 
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                mouse_x, mouse_y = pygame.mouse.get_pos()
+                mouse_x -= MAP_OFFSET_X
+                mouse_y -= MAP_OFFSET_Y
+                mouse_x //= TILESIZE
+                mouse_y //= TILESIZE
+
+                if event.button == 1:
+                    # left button click
+                    self.boardArchipelago.selectIslandAt(mouse_x, mouse_y)
+                else:
+                    # right button click
+                    self.boardArchipelago.selectIslandAt(mouse_x, mouse_y)
+
     def update(self):
         pass
 
     def draw(self):
-        if self.running:  # Only draw if the game is still running
-            self.window.fill(BGCOLOUR)
-            #self.drawGrid()
-            self.board.draw(self.window)
-            pygame.display.flip()  # Use single flip instead of update
+        if self.running:
+            # Only draw if the game is still running
+            self.window.fill(WHITE)
+            self.boardArchipelago.draw(self.window.subsurface([MAP_OFFSET_X,MAP_OFFSET_Y,MAP_OFFSET_X + WIDTH,MAP_OFFSET_Y + HEIGHT]))
+            # Use single flip!
+            pygame.display.flip()
 
     def drawGrid(self):
         offsetFromTop = 50

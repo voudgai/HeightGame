@@ -23,10 +23,12 @@ class Island:
                 redLine.draw(board_surface)
 
     def selectIsland(self):
+        print("Selected island\n")
         self.selected = True
 
     def unselectIsland(self):
+        print("Unselected island\n")
         self.selected = False
 
     def getAvgHeight(self):
-        return self.totalHeight / self.numberOfCells
+        return self.totalHeight // self.numberOfCells
