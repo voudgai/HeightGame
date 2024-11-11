@@ -5,6 +5,9 @@ import requests
 import sys
 import os
 
+import pygame
+from pyvidplayer2 import VideoPlayer, Video
+
 GET_REQ_LINK = "https://jobfair.nordeus.com/jf24-fullstack-challenge/test"
 
 BGCOLOUR = (0, 0, 0)
@@ -20,7 +23,7 @@ YELLOW = (255, 255, 0)
 BGCOLOUR = DARKGREY
 
 # game settings
-TILESIZE = 16
+TILESIZE = 18
 ROWS = 30
 COLS = 30
 FPS = 60
@@ -63,16 +66,16 @@ height_levels_images = []
 for i in range(0 , HEIGHT_LEVELS_NUM):
     height_levels_images.append(pygame.transform.scale(pygame.image.load(os.path.join("../assets", f"height{height_levels[i]}_1.png")), (TILESIZE, TILESIZE)))
 
-NUM_OF_BOATS = random.randint(1,5)
+NUM_OF_BOATS = random.randint(3,5)
 BOAT_HEIGHT = int(TILESIZE * 1)
 BOAT_WIDTH = int(TILESIZE * 1)
 boat_image = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "fish-boat.png")), (BOAT_HEIGHT, BOAT_WIDTH))
 
-NUM_OF_SHIPS = random.randint(1,9)
+NUM_OF_SHIPS = random.randint(40,50)
 SHIP_WIDTH = int(TILESIZE * 2)
 SHIP_HEIGHT = int(TILESIZE * 2)
 ship_images = []
-for i in range(1,5):
+for i in range(1,7):
     ship_images.append(pygame.transform.scale(pygame.image.load(os.path.join("../assets", f"ship{i}.png")), (SHIP_HEIGHT, SHIP_WIDTH)))
 
 flag_image = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "flag.png")), (TILESIZE * 2, TILESIZE * 2))
@@ -80,7 +83,25 @@ tree_image = pygame.transform.scale(pygame.image.load(os.path.join("../assets", 
 palm_image = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "palm.png")), (TILESIZE * 2, TILESIZE * 2))
 cloud_image = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "cloud.png")), (TILESIZE * 2, TILESIZE * 2))
 plane_image = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "red-plane.png")), (TILESIZE * 3, TILESIZE * 3))
+empty_image = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "empty.png")), (TILESIZE * 3, TILESIZE * 3))
 
 red_lines_images = []
 for i in range(16): # 1 for UP, 2 for RIGHT, 4 for LEFT, 8 for DOWN, (UP | DOWN) for combinations, 16 all in all
     red_lines_images.append(pygame.transform.scale(pygame.image.load(os.path.join("../assets", f"red_line{i}.png")),(TILESIZE, TILESIZE)))
+
+black_lines_images = []
+for i in range(16): # 1 for UP, 2 for RIGHT, 4 for LEFT, 8 for DOWN, (UP | DOWN) for combinations, 16 all in all
+    black_lines_images.append(pygame.transform.scale(pygame.image.load(os.path.join("../assets", f"black_line{i}.png")),(TILESIZE, TILESIZE)))
+
+
+
+def getHeightSignImage(height):
+    print("Height sign image not implemented yet")
+    return flag_image
+
+intro_video = Video("../intro_video_and_material/Pirates_game_INTRO2.mp4")
+skip_button_intro_image = pygame.transform.scale(pygame.image.load(os.path.join("../intro_video_and_material", "skip_button_intro.png")),(100,50))
+
+start_screen_background_image = pygame.transform.scale(pygame.image.load(os.path.join("../intro_video_and_material", "welcome_picture.png")), (WINDOW_WIDTH, WINDOW_WIDTH))
+
+start_button_image = pygame.transform.scale(pygame.image.load(os.path.join("../intro_video_and_material", "start_button_retro.png")), (150,50))

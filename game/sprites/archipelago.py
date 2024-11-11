@@ -179,6 +179,10 @@ class Archipelago:
         self.idIslandSelected = self.cellToIslandDict[(x, y)]
         self.islands[self.idIslandSelected].selectIsland()
         print("Clicked on island")
+
+        if self.islands[self.idIslandSelected].getAvgHeight() == self.islands[self.idHighestAvgIsland].getAvgHeight():
+            self.islands[self.idIslandSelected].showHeight(self.board_surface)
+            print("You selected highest!")
         return True
 
 

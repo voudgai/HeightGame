@@ -1,6 +1,10 @@
-from game import randomIslandGenerator
+import sys
+
 from game.randomIslandGenerator import RandomIslandGenerator
 from game.sprites.archipelago import *
+
+from game.startScreen import StartScreen
+
 
 class Game:
     def __init__(self):
@@ -11,11 +15,12 @@ class Game:
         self.winHeight = WINDOW_HEIGHT
         self.running = True
 
-        self.window = pygame.display.set_mode((self.winWidth, self.winHeight))
+        self.display = pygame.display.set_mode((self.winWidth, self.winHeight))
         pygame.display.set_caption(TITLE)
         self.clock = pygame.time.Clock()
 
         self.mapFromNordeus = True
+        self.startScreen = StartScreen(self)
 
 
     def new(self):
@@ -28,11 +33,13 @@ class Game:
 
     def run(self):
         self.running = True
+        self.startScreen.start()
         while self.running:
             self.clock.tick(FPS)
             self.events()
             self.update()
             self.draw()
+
 
     def events(self):
         for event in pygame.event.get():
@@ -53,16 +60,19 @@ class Game:
                     # right button click
                     self.boardArchipelago.selectIslandAt(mouse_x, mouse_y)
 
+
     def update(self):
         pass
+
 
     def draw(self):
         if self.running:
             # Only draw if the game is still running
-            self.window.fill(WHITE)
-            self.boardArchipelago.draw(self.window.subsurface([MAP_OFFSET_X,MAP_OFFSET_Y,MAP_OFFSET_X + WIDTH,MAP_OFFSET_Y + HEIGHT]))
+            self.display.fill(WHITE)
+            self.boardArchipelago.draw(self.display.subsurface([MAP_OFFSET_X, MAP_OFFSET_Y, MAP_OFFSET_X + WIDTH, MAP_OFFSET_Y + HEIGHT]))
             # Use single flip!
             pygame.display.flip()
+
 
     def drawGrid(self):
         offsetFromTop = 50
@@ -72,16 +82,16 @@ class Game:
         y = offsetFromTop
         for i in range(self.rows):
             x += distanceBtwRows
-            pygame.draw.line(self.window, WHITE, (x, offsetFromTop), (x, self.winHeight), 2)
-            pygame.draw.line(self.window, WHITE, (0, y), (self.winWidth, y), 2)
+            pygame.draw.line(self.display, WHITE, (x, offsetFromTop), (x, self.winHeight), 2)
+            pygame.draw.line(self.display, WHITE, (0, y), (self.winWidth, y), 2)
             y += distanceBtwCols
 
 
 def main():
     game = Game()
-    while 1:
-        game.new()
-        game.run()
+
+    game.new()
+    game.run()
     pygame.quit()
     sys.exit()
 

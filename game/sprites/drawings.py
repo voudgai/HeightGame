@@ -2,7 +2,7 @@ from ..settings import *
 from abc import ABC, abstractmethod
 
 class Drawing:
-    def __init__(self, x, y, image, radius):
+    def __init__(self, x, y, image, radius = 5):
         self.x = x
         self.y = y
         self.R = radius
@@ -12,12 +12,25 @@ class Drawing:
         board_surface.blit(self.image, (self.x, self.y))
 
     def overlaps(self, otherDrawing):
+        # return self.image.get_rect().colliderect(otherDrawing.image.get_rect())
         dx = abs(self.x - otherDrawing.x)
         dy = abs(self.y - otherDrawing.y)
         return bool(pow(pow(dx, 2) + pow(dy, 2), 1/2) < min(self.R, otherDrawing.R))
-class ColouredCellBorder(Drawing, ABC):
-    def __init__(self, x, y, image):
-        pass
+
+
+class BlackCellBorder(Drawing):
+    SIDE_UP = 1 # 0001
+    SIDE_DOWN = 2 # 0010
+    SIDE_LEFT = 4 # 0100
+    SIDE_RIGHT = 8 # 1000
+
+    def __init__(self, x, y, SIDE):
+        #side should be example: side = SIDE_UP | SIDE_LEFT
+        if not 0 <= SIDE <= 15:
+            print("SIDE must be between 0 and 15, example: SIDE = SIDE_UP | SIDE_RIGHT, if you want red line which goes down and right")
+            pass
+        Drawing.__init__(self, x, y, black_lines_images[SIDE], 0)
+
 
 class RedCellBorder(Drawing):
     SIDE_UP = 1 # 0001
@@ -34,7 +47,7 @@ class RedCellBorder(Drawing):
 
 class Ship(Drawing):
     def __init__(self, x, y):
-        Drawing.__init__(self, x * TILESIZE, y * TILESIZE, ship_images[random.randint(0,3)], SHIP_HEIGHT * 1.5 // 1)
+        Drawing.__init__(self, x * TILESIZE, y * TILESIZE, ship_images[random.randint(0,5)], SHIP_HEIGHT * 1.5 // 1)
 
 class Boat(Drawing):
     def __init__(self, x, y):

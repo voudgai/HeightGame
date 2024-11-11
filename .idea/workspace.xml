@@ -4,21 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="157630dd-4fb8-49d0-9791-f8bbf6a5b1ff" name="Changes" comment="Changed names of classes.&#10;Added Island bordering function.">
+    <list default="true" id="157630dd-4fb8-49d0-9791-f8bbf6a5b1ff" name="Changes" comment="Bug issue: Not connecting islands corectly.&#10;&#10;Fix: BFS.">
+      <change afterPath="$PROJECT_DIR$/game/buttons.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/intro.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/startScreen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/height0_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/height0_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/height1000_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/height1000_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/height150_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/height150_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/height300_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/height300_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/height450_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/height450_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/height50.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/height50.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/height50_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/height50_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/height650_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/height650_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/height800_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/height800_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/height950_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/height950_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/ship.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/game/gameWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/gameWindow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/randomIslandGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/randomIslandGenerator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/sprites/archipelago.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/sprites/archipelago.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/sprites/drawings.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/sprites/drawings.py" afterDir="false" />
@@ -39,18 +30,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "voudgai"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;voudgai&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/voudgai/HeightGame.git",
-    "accountId": "daf93dad-a250-453c-9bad-7132e48494c4"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/voudgai/HeightGame.git&quot;,
+    &quot;accountId&quot;: &quot;daf93dad-a250-453c-9bad-7132e48494c4&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -66,11 +57,17 @@
     "Python.game.executor": "Run",
     "Python.gameWindow.executor": "Run",
     "Python.grid.executor": "Run",
+    "Python.intro.executor": "Run",
     "Python.main.executor": "Run",
     "Python.randomIslandGenerator.executor": "Run",
     "Python.settings.executor": "Run",
     "Python.sprites.executor": "Run",
+    "Python.startScreen.executor": "Run",
+    "Python.video.executor": "Run",
+    "Python.videoplayer_resizing_demo.executor": "Run",
     "Python.welcome.executor": "Run",
+    "Python.welcomeScreen.executor": "Run",
+    "Python.youtube_streaming_demo.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -110,7 +107,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1731018790366</updated>
-      <workItem from="1731019147359" duration="45998000" />
+      <workItem from="1731019147359" duration="53673000" />
+      <workItem from="1731258803929" duration="12891000" />
     </task>
     <task id="LOCAL-00001" summary="Added Welcome script">
       <option name="closed" value="true" />
@@ -128,7 +126,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731111696726</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Bug issue: Not connecting islands corectly.&#10;&#10;Fix: BFS.">
+      <option name="closed" value="true" />
+      <created>1731128807414</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731128807414</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,16 +154,23 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Welcome script" />
     <MESSAGE value="Changed names of classes.&#10;Added Island bordering function." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed names of classes.&#10;Added Island bordering function." />
+    <MESSAGE value="Bug issue: Not connecting islands corectly.&#10;&#10;Fix: BFS." />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug issue: Not connecting islands corectly.&#10;&#10;Fix: BFS." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/HeightGame$youtube_streaming_demo.coverage" NAME="youtube_streaming_demo Coverage Results" MODIFIED="1731280599279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads/pyvidplayer2-main/pyvidplayer2-main/examples" />
+    <SUITE FILE_PATH="coverage/HeightGame$videoplayer_resizing_demo.coverage" NAME="videoplayer_resizing_demo Coverage Results" MODIFIED="1731282014483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads/pyvidplayer2-main/pyvidplayer2-main/examples" />
+    <SUITE FILE_PATH="coverage/HeightGame$intro.coverage" NAME="intro Coverage Results" MODIFIED="1731282198049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
+    <SUITE FILE_PATH="coverage/HeightGame$sprites.coverage" NAME="sprites Coverage Results" MODIFIED="1731108712944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
+    <SUITE FILE_PATH="coverage/HeightGame$settings.coverage" NAME="settings Coverage Results" MODIFIED="1731282168404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
+    <SUITE FILE_PATH="coverage/HeightGame$welcomeScreen.coverage" NAME="welcomeScreen Coverage Results" MODIFIED="1731272017670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game/sprites" />
+    <SUITE FILE_PATH="coverage/HeightGame$startScreen.coverage" NAME="startScreen Coverage Results" MODIFIED="1731284343282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
     <SUITE FILE_PATH="coverage/HeightGame$grid.coverage" NAME="grid Coverage Results" MODIFIED="1731110669110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
     <SUITE FILE_PATH="coverage/HeightGame$randomIslandGenerator.coverage" NAME="randomIslandGenerator Coverage Results" MODIFIED="1731114012205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
     <SUITE FILE_PATH="coverage/HeightGame$archipelago.coverage" NAME="archipelago Coverage Results" MODIFIED="1731116467177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game/sprites" />
+    <SUITE FILE_PATH="coverage/HeightGame$video.coverage" NAME="video Coverage Results" MODIFIED="1731281971248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Lib/site-packages/pyvidplayer2" />
     <SUITE FILE_PATH="coverage/HeightGame$game.coverage" NAME="game Coverage Results" MODIFIED="1731110821348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
-    <SUITE FILE_PATH="coverage/HeightGame$sprites.coverage" NAME="sprites Coverage Results" MODIFIED="1731108712944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
-    <SUITE FILE_PATH="coverage/HeightGame$settings.coverage" NAME="settings Coverage Results" MODIFIED="1731121853225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
     <SUITE FILE_PATH="coverage/HeightGame$main.coverage" NAME="main Coverage Results" MODIFIED="1731022653340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/HeightGame$gameWindow.coverage" NAME="gameWindow Coverage Results" MODIFIED="1731128375869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
+    <SUITE FILE_PATH="coverage/HeightGame$gameWindow.coverage" NAME="gameWindow Coverage Results" MODIFIED="1731284635890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
   </component>
 </project>
