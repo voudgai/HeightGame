@@ -4,7 +4,7 @@ from game.sprites.island import *
 
 class Archipelago:
     def __init__(self, height_matrix):
-        self.board_surface = pygame.Surface((WIDTH, HEIGHT))
+        self.board_surface = pygame.Surface((LEVEL_WIDTH, LEVEL_HEIGHT))
         self.heightMatrix = self.mapToString(height_matrix) # matrix of heights formed of input from Request.GET
         self.waterCells = [] # water cells array
         self.islands = [] # islands list
@@ -185,6 +185,10 @@ class Archipelago:
             print("You selected highest!")
         return True
 
+    def restartIsland(self):
+        if self.idIslandSelected > -1:
+            self.islands[self.idIslandSelected].unselectIsland()
+        self.idIslandSelected = -1
 
     def display_board(self):
         for i in range(30):

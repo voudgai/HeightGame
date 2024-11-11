@@ -33,7 +33,7 @@ class Island:
         else:
             for blackLine in self.blackLines:
                 blackLine.draw(board_surface)
-        if self.heightImage != empty_image:
+        if self.heightImage != empty_image and self.selected:
             x = self.highestCell.x
             y = self.highestCell.y
             board_surface.blit(self.heightImage, (x, y))

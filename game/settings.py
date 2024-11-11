@@ -28,15 +28,15 @@ ROWS = 30
 COLS = 30
 FPS = 60
 
-WIDTH = COLS * TILESIZE
-HEIGHT = TILESIZE * ROWS
-WINDOW_WIDTH = WIDTH + 200
-WINDOW_HEIGHT = HEIGHT + 200
+LEVEL_WIDTH = COLS * TILESIZE
+LEVEL_HEIGHT = TILESIZE * ROWS
+WINDOW_WIDTH = LEVEL_WIDTH + 200
+WINDOW_HEIGHT = LEVEL_HEIGHT + 200
 
 MAP_OFFSET_X = 100
 MAP_OFFSET_Y = 100
 
-TITLE = "Top Hill"
+TITLE = "John without Teeth and His Gold"
 
 HEIGHT_LEVELS_NUM = 9
 height_levels = [0,50,200,300,450,650,800,950,1000]
@@ -101,7 +101,16 @@ def getHeightSignImage(height):
 
 intro_video = Video("../intro_video_and_material/Pirates_game_INTRO2.mp4")
 skip_button_intro_image = pygame.transform.scale(pygame.image.load(os.path.join("../intro_video_and_material", "skip_button_intro.png")),(100,50))
-
 start_screen_background_image = pygame.transform.scale(pygame.image.load(os.path.join("../intro_video_and_material", "welcome_picture.png")), (WINDOW_WIDTH, WINDOW_WIDTH))
-
 start_button_image = pygame.transform.scale(pygame.image.load(os.path.join("../intro_video_and_material", "start_button_retro.png")), (150,50))
+play_screen_background_image = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "pirate_map_3.jpg")), (WINDOW_WIDTH,WINDOW_HEIGHT))
+
+NUM_OF_LEVELS = 4
+# this num is without selector level, with him its +1
+# selector levels image is level_icon_images[0]
+level_icon_images = []
+level_icon_images.append(plane_image)
+level_icon_images.append(tree_image)
+level_icon_images.append(cloud_image)
+level_icon_images.append(boat_image)
+level_icon_images.append(palm_image)
