@@ -23,48 +23,35 @@ YELLOW = (255, 255, 0)
 BGCOLOUR = DARKGREY
 
 # game settings
-TILESIZE = 18
+TILESIZE = 20
 ROWS = 30
 COLS = 30
 FPS = 60
 
 LEVEL_WIDTH = COLS * TILESIZE
 LEVEL_HEIGHT = TILESIZE * ROWS
-WINDOW_WIDTH = LEVEL_WIDTH + 200
-WINDOW_HEIGHT = LEVEL_HEIGHT + 200
+WINDOW_WIDTH = LEVEL_WIDTH + 140
+WINDOW_HEIGHT = LEVEL_HEIGHT + 140
 
-MAP_OFFSET_X = 100
-MAP_OFFSET_Y = 100
+MAP_OFFSET_X = (WINDOW_WIDTH - LEVEL_WIDTH) // 2
+MAP_OFFSET_Y = (WINDOW_HEIGHT - LEVEL_HEIGHT) // 2
 
 TITLE = "John without Teeth and His Gold"
 
-HEIGHT_LEVELS_NUM = 9
-height_levels = [0,50,200,300,450,650,800,950,1000]
+HEIGHT_LEVELS_NUM = 15
+elevation_legend_image = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "elevation_legend.png")),(20, 300))
+height_levels = [0]
+for i in range(HEIGHT_LEVELS_NUM - 1): height_levels.append( i * 75 )
+height_levels.append(1000)
 
 def getHeightLevel(height):
-    if height == 0:
-        return 0
-    if height <= 50:
-        return 1
-    if height <= 200:
-        return 2
-    if height <= 300:
-        return 3
-    if height <= 450:
-        return 4
-    if height <= 650:
-        return 5
-    if height <= 800:
-        return 6
-    if height <= 950:
-        return 7
-    if height <= 1000:
-        return 8
+    if height == 0: return 0
+    if height < 975: return (height + 74) // 75
+    else: return HEIGHT_LEVELS_NUM -1
 
-    return 2
 height_levels_images = []
 for i in range(0 , HEIGHT_LEVELS_NUM):
-    height_levels_images.append(pygame.transform.scale(pygame.image.load(os.path.join("../assets", f"height{height_levels[i]}_1.png")), (TILESIZE, TILESIZE)))
+    height_levels_images.append(pygame.transform.scale(pygame.image.load(os.path.join("../assets", f"height{height_levels[i]}_2.png")), (TILESIZE, TILESIZE)))
 
 NUM_OF_BOATS = random.randint(3,5)
 BOAT_HEIGHT = int(TILESIZE * 1)
@@ -105,12 +92,40 @@ start_screen_background_image = pygame.transform.scale(pygame.image.load(os.path
 start_button_image = pygame.transform.scale(pygame.image.load(os.path.join("../intro_video_and_material", "start_button_retro.png")), (150,50))
 play_screen_background_image = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "pirate_map_3.jpg")), (WINDOW_WIDTH,WINDOW_HEIGHT))
 
-NUM_OF_LEVELS = 4
+NUM_OF_LEVELS = 5
 # this num is without selector level, with him its +1
 # selector levels image is level_icon_images[0]
-level_icon_images = []
-level_icon_images.append(plane_image)
-level_icon_images.append(tree_image)
-level_icon_images.append(cloud_image)
-level_icon_images.append(boat_image)
-level_icon_images.append(palm_image)
+BACK_TO_MAP_X_OFFS = WINDOW_WIDTH - MAP_OFFSET_X # for level selector shortcut
+BACK_TO_MAP_Y_OFFS = 55 # for level selector shortcut
+
+playBackground_zoom_ratio_X = WINDOW_WIDTH / 550
+playBackground_zoom_ratio_Y = WINDOW_HEIGHT / 550
+level_icons_coordinates = [( playBackground_zoom_ratio_X * 200, playBackground_zoom_ratio_Y * 130),
+                           ( playBackground_zoom_ratio_X * 160, playBackground_zoom_ratio_Y * 190),
+                           ( playBackground_zoom_ratio_X * 250, playBackground_zoom_ratio_Y * 270),
+                           ( playBackground_zoom_ratio_X * 340, playBackground_zoom_ratio_Y * 330),
+                           ( playBackground_zoom_ratio_X * 190, playBackground_zoom_ratio_Y * 400)]
+level_icon_images = [
+    pygame.transform.scale(pygame.image.load(os.path.join("../assets", "level_icon_selector.png")), (150, 50)),
+    pygame.transform.scale(pygame.image.load(os.path.join("../assets", "level_icon_1.png")), (75, 75)),
+    pygame.transform.scale(pygame.image.load(os.path.join("../assets", "level_icon_2.png")), (75, 75)),
+    pygame.transform.scale(pygame.image.load(os.path.join("../assets", "level_icon_3.png")), (75, 75)),
+    pygame.transform.scale(pygame.image.load(os.path.join("../assets", "level_icon_4.png")), (75, 75)),
+    pygame.transform.scale(pygame.image.load(os.path.join("../assets", "level_icon_random.png")), (75, 75))]
+
+finished_level_icon_image = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "level_icon_finished.png")), (75,75))
+
+NUM_OF_INSTRUMENTALS = 3
+levels_instrumentals = [pygame.mixer.Sound("../assets/Drunken Sailor Instrumental.mp3"),pygame.mixer.Sound("../assets/level_music_1.mp3"),pygame.mixer.Sound("../assets/level_music_2.mp3")]
+
+NUM_OF_HEARTS = 3
+HEARTS_PLACEHOLDER_X_OFFS = MAP_OFFSET_X + 150
+HEARTS_PLACEHOLDER_Y_OFFS = BACK_TO_MAP_Y_OFFS
+
+heart_placeholder_image0 = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "heart_placeholder0.png")),(150,50))
+heart_placeholder_image1 = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "heart_placeholder1.png")),(150,50))
+heart_placeholder_image2 = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "heart_placeholder2.png")),(150,50))
+heart_placeholder_image3 = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "heart_placeholder3.png")),(150,50))
+
+SCORE_PLACEHOLDER_X_OFFS = MAP_OFFSET_X
+SCORE_PLACEHOLDER_Y_OFFS = 50

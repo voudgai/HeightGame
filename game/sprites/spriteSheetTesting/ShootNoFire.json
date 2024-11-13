@@ -1,0 +1,49 @@
+{"frames": {
+  "pirateShooting1.png":
+  {
+    "frame": {"x": 1,"y": 1,"w": 244,"h": 106},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x": 0,"y": 0,"w": 244,"h": 106},
+    "sourceSize": {"w": 200,"h": 128}
+  },
+
+  "pirateShooting2.png":
+  {
+    "frame": {"x": 244,"y": 1,"w": 244,"h": 106},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x": 0,"y": 0,"w": 244,"h": 106},
+    "sourceSize": {"w": 244,"h": 106}
+  },
+
+  "pirateShooting3.png":
+  {
+    "frame": {"x": 488,"y": 1,"w": 244,"h": 106},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x": 0,"y": 0,"w": 244,"h": 106},
+    "sourceSize": {"w": 244,"h": 106}
+  },
+
+  "pirateShooting4.png":
+  {
+    "frame": {"x": 732,"y": 1,"w": 244,"h": 106},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x": 0,"y": 0,"w": 244,"h": 106},
+    "sourceSize": {"w": 244,"h": 106}
+  },
+
+  "pirateShooting5.png":
+  {
+    "frame": {"x": 976,"y": 1,"w": 244,"h": 106},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x": 0,"y": 0,"w": 244,"h": 106},
+    "sourceSize": {"w": 244,"h": 106}
+  }
+},
+"meta":{
+  "image": "ShootNoFire.png"
+}}

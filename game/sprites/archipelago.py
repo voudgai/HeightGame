@@ -1,5 +1,7 @@
 from collections import deque
 
+from scipy.stats import false_discovery_control
+
 from game.sprites.island import *
 
 class Archipelago:
@@ -185,7 +187,15 @@ class Archipelago:
             print("You selected highest!")
         return True
 
-    def restartIsland(self):
+    def isHighestSelected(self):
+        if self.idIslandSelected == -1:
+            return False
+        self.findHighestAvgIsland()
+        if self.idIslandSelected != self.idHighestAvgIsland:
+            return False
+        return True
+
+    def resetArchipelago(self):
         if self.idIslandSelected > -1:
             self.islands[self.idIslandSelected].unselectIsland()
         self.idIslandSelected = -1

@@ -13,6 +13,7 @@ class Drawing:
 
     def overlaps(self, otherDrawing):
         # return self.image.get_rect().colliderect(otherDrawing.image.get_rect())
+        # this is not working very well, will fix it before or after
         dx = abs(self.x - otherDrawing.x)
         dy = abs(self.y - otherDrawing.y)
         return bool(pow(pow(dx, 2) + pow(dy, 2), 1/2) < min(self.R, otherDrawing.R))
