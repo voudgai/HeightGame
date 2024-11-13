@@ -4,417 +4,105 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="157630dd-4fb8-49d0-9791-f8bbf6a5b1ff" name="Changes" comment="Hearts implemented - needs refining&#10;Implemented guessing - needs refining&#10;&#10;&#10;Next: Implement Random level to be non finishable, add a ending screen to choose do you restart the game after finishing it, add title in playing screen, add players, add animations upon guessing the island right">
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_Attack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_Attack2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_Attack2NoMovement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_AttackCombo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_AttackComboNoMovement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_AttackNoMovement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_Crouch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_CrouchAttack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_CrouchFull.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_CrouchTransition.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_CrouchWalk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_Dash.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_Death.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_DeathNoMovement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_Fall.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_Hit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_Idle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_Jump.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_JumpFallInbetween.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_Roll.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_Run.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_Slide.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_SlideFull.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_SlideTransitionEnd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_SlideTransitionStart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_TurnAround.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_WallClimb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_WallClimbNoMovement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_WallHang.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_PNGSheets/_WallSlide.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__Attack.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__Attack2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__Attack2NoMovement.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__AttackCombo2hit.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__AttackComboNoMovement.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__AttackNoMovement.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__Crouch.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__CrouchAll.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__CrouchAttack.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__CrouchTransition.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__CrouchWalk.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__Dash.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__Death.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__DeathNoMovement.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__Fall.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__Hit.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__Idle.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__Jump.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__JumpFallInbetween.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__Roll.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__Run.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__Slide.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__SlideAll.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__SlideTransitionEnd.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__SlideTransitionStart.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__TurnAround.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__WallClimb.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__WallClimbNoMovement.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__WallHang.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/NoOutline/120x80_gifs/__WallSlide.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_Attack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_Attack2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_Attack2NoMovement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_AttackCombo2hit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_AttackComboNoMovement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_AttackNoMovement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_Crouch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_CrouchAttack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_CrouchFull.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_CrouchTransition.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_CrouchWalk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_Dash.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_Death.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_DeathNoMovement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_Fall.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_Hit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_Idle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_Jump.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_JumpFallInbetween.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_Roll.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_Run.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_Slide.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_SlideFull.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_SlideTransitionEnd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_SlideTransitionStart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_TurnAround.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_WallClimb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_WallClimbNoMovement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_WallHang.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_PNGSheets/_WallSlide.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__Attack.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__Attack2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__Attack2NoMovement.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__AttackCombo2hit.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__AttackComboNoMovement.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__AttackNoMovement.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__Crouch.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__CrouchAll.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__CrouchAttack.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__CrouchTransition.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__CrouchWalk.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__Dash.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__Death.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__DeathNoMovement.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__Fall.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__Hit.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__Idle.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__Jump.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__JumpFallInbetween.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__Roll.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__Run.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__Slide.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__SlideAll.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__SlideTransitionEnd.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__SlideTransitionStart.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__TurnAround.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__WallClimb.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__WallClimbNoMovement.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__WallHang.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour1/Outline/120x80_gifs/__WallSlide.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_Attack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_Attack2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_Attack2NoMovement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_AttackCombo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_AttackComboNoMovement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_AttackNoMovement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_Crouch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_CrouchAll.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_CrouchAttack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_CrouchTransition.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_CrouchWalk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_Dash.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_Death.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_DeathNoMovement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_Fall.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_Hit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_Idle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_Jump.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_JumpFallInbetween.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_Roll.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_Run.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_Slide.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_SlideAll.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_SlideTransitionEnd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_SlideTransitionStart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_TurnAround.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_WallClimb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_WallClimbNoMovement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_WallHang.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_PNGSheets/_WallSlide.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__Attack.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__Attack2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__Attack2NoMovement.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__AttackCombo2hit.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__AttackComboNoMovement.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__AttackNoMovement.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__Crouch.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__CrouchAll.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__CrouchAttack.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__CrouchTransition.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__CrouchWalk.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__Dash.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__Death.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__DeathNoMovement.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__Fall.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__Hit.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__Idle.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__Jump.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__JumpFallInbetween.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__Roll.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__Run.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__Slide.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__SlideAll.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__SlideTransitionEnd.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__SlideTransitionStart.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__TurnAround.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__WallClimb.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__WallClimbNoMovement.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__WallHang.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/NoOutline/120x80_gifs/__WallSlide.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_Attack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_Attack2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_Attack2NoMovement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_AttackCombo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_AttackComboNoMovement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_AttackNoMovement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_Crouch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_CrouchAll.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_CrouchAttack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_CrouchTransition.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_CrouchWalk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_Dash.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_Death.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_DeathNoMovement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_Fall.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_Hit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_Idle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_Jump.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_JumpFallInbetween.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_Roll.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_Run.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_Slide.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_SlideAll.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_SlideTransitionEnd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_SlideTransitionStart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_TurnAround.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_WallClimb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_WallClimbNoMovement.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_WallHang.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_PNGSheets/_WallSlide.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__Attack.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__Attack2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__Attack2NoMovement.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__AttackCombo2hit.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__AttackComboNoMovement.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__AttackNoMovement.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__Crouch.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__CrouchAll.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__CrouchAttack.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__CrouchTransition.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__CrouchWalk.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__Dash.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__Death.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__DeathNoMovement.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__Fall.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__Hit.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__Idle.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__Jump.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__JumpFallInbetween.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__Roll.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__Run.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__Slide.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__SlideAll.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__SlideTransitionEnd.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__SlideTransitionStart.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__TurnAround.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__WallClimb.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__WallClimbNoMovement.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__WallHang.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Colour2/Outline/120x80_gifs/__WallSlide.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Comparison2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Drunken Sailor Instrumental.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Font.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_1/Attack 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_1/Attack 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_1/Attack 3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_1/Dead.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_1/Defend.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_1/Hurt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_1/Idle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_1/Jump.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_1/Protect.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_1/Run+Attack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_1/Run.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_1/Walk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_2/Attack 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_2/Attack 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_2/Attack 3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_2/Dead.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_2/Defend.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_2/Hurt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_2/Idle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_2/Jump.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_2/Protect.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_2/Run+Attack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_2/Run.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_2/Walk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_3/Attack 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_3/Attack 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_3/Attack 3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_3/Dead.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_3/Defend.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_3/Hurt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_3/Idle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_3/Jump.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_3/Protect.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_3/Run+Attack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_3/Run.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Knight_3/Walk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/License.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Patreon.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Pirate by seartsy/Atk1-6frm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Pirate by seartsy/Atk2-6frm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Pirate by seartsy/Atk3-6frm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Pirate by seartsy/Death-4frm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Pirate by seartsy/Effect-Gunfire-5frm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Pirate by seartsy/Effect-Jump-Dust-4frm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Pirate by seartsy/Effect-Land-Dust-7frm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Pirate by seartsy/Fall-Down-2frm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Pirate by seartsy/Fall-LandingGround-2frm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Pirate by seartsy/Gun-Out-6frm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Pirate by seartsy/Gun-Shoot-5frm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Pirate by seartsy/Gun-Shoot-Without-Fire-5frm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Pirate by seartsy/Gun-in-5frm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Pirate by seartsy/Hit-3frm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Pirate by seartsy/Idle-5frm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Pirate by seartsy/Jump-2frm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Pirate by seartsy/Run-6frm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/PromoAnimated2x.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_1/Attack 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_1/Attack 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_1/Attack 3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_1/Dead.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_1/Defend.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_1/Hurt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_1/Idle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_1/Jump.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_1/Protect.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_1/Run+Attack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_1/Run.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_1/Walk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_2/Attack 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_2/Attack 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_2/Attack 3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_2/Dead.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_2/Defend.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_2/Hurt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_2/Idle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_2/Jump.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_2/Protect.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_2/Run+Attack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_2/Run.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_2/Walk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_3/Attack 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_3/Attack 2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_3/Attack 3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_3/Dead.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_3/Defend.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_3/Hurt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_3/Idle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_3/Jump.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_3/Protect.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_3/Run+Attack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_3/Run.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Spritesheet 128/Knight_3/Walk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/__MACOSX/pack_loreon_char_free/._.DS_Store" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/__MACOSX/pack_loreon_char_free/sword_1/._.DS_Store" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/heart_placeholder0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/heart_placeholder1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/heart_placeholder2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/heart_placeholder3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/level_icon_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/level_icon_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/level_icon_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/level_icon_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/level_icon_finished.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/level_icon_random.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/level_icon_selector.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/level_music_1.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/level_music_2.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/attack1_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/attack1_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/attack1_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/attack1_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/attack1_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/attack1_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/attack4_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/attack4_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/attack4_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/attack4_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/attack4_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/attack4_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/fall_back_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/fall_back_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/fall_back_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/fall_back_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/fall_back_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/hit_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/hit_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/hit_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/jump_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/jump_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/jump_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/jump_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/jump_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/ready_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/ready_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/ready_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/run_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/run_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/run_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/run_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/run_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/run_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/stand_up_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/stand_up_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/stand_up_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/stand_up_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/stand_up_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/walk_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/walk_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/walk_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/walk_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/walk_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/pack_loreon_char_free/sword_1/walk_6.png" afterDir="false" />
+    <list default="true" id="157630dd-4fb8-49d0-9791-f8bbf6a5b1ff" name="Changes" comment="Implemented Main character which can act as a mouse&#10;&#10;Next: Implement Random level to be non finishable, add a ending screen to choose do you restart the game after finishing it, add title in playing screen, add animations upon guessing the island right,&#10;add enemies">
+      <change afterPath="$PROJECT_DIR$/assets/Animated Chests/Chests.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Animated Chests/Chests.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Animated Chests/Chests.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Animated Chests/Chests_Snow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Animated Chests/brown_chest.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Animated Chests/recordingBrownChest.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/elevation_legend.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/height0_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/height1000_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/height150_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/height225_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/height300_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/height375_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/height450_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/height525_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/height600_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/height675_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/height750_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/height75_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/height825_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/height900_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/height975_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/COUPON.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/COUPON.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Font.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Licens.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/PSD/Warrior_1.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/PSD/Warrior_2_Spritelist.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/PSD/Warrior_3_Spritelist.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_1/Attack_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_1/Attack_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_1/Attack_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_1/Dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_1/Hurt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_1/Idle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_1/Jump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_1/Run+Attack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_1/Run.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_1/RunLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_1/Walk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_2/Attack_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_2/Attack_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_2/Dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_2/Hurt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_2/Idle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_2/Jump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_2/Protect.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_2/Run+Attack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_2/Run.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_2/Walk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_3/Attack_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_3/Attack_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_3/Dead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_3/Hurt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_3/Idle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_3/Jump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_3/Protect.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_3/Run+Attack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_3/Run.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_3/Walk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/version.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/19cba7c472c00dc4b6be4f7314a04410.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/19cba7c472c00dc4b6be4f7314a04410.head" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/1b15e19d796839ac93068711d32c2557.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/1b15e19d796839ac93068711d32c2557.head" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/38e02d124325c756243ee99a92e528ed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/427729db96c74210a6daf50f46f68e14.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/427729db96c74210a6daf50f46f68e14.head" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/43a138bdf7507cad77eb1201a9b99081.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/43a138bdf7507cad77eb1201a9b99081.head" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/489f66f53e526d7110d2d34527229eca.tmpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/7ba5f9b81eefd22864d4f269f6440302.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/7ba5f9b81eefd22864d4f269f6440302.head" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/8e0c8197f178117b91e8dc55d7eee0db.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/8e0c8197f178117b91e8dc55d7eee0db.head" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/8e7732e36d74b6ca66d825cd22d53b85.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/8e7732e36d74b6ca66d825cd22d53b85.head" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/a954d0fa88d49b578037b7e007cf3dc2.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/a954d0fa88d49b578037b7e007cf3dc2.head" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/b0023fe2aacd2375a846b7629ddaab1c.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/b0023fe2aacd2375a846b7629ddaab1c.head" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/da83f20a925311df5be3721e12eb180b.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/da83f20a925311df5be3721e12eb180b.head" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/e81b92874f189a8c7136315a0e88ab5a.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/e81b92874f189a8c7136315a0e88ab5a.head" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/ee25ea4dcef639025200b5bea19f91dd.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/ee25ea4dcef639025200b5bea19f91dd.head" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/ffe5224cce19ab35b45c00567061a73a.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web-cache/ffe5224cce19ab35b45c00567061a73a.head" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web/game.apk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/build/web/index.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/game/characterSprite.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/game/endScreen.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/game/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/sprites/spriteSheetTesting/ShootNoFire.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/sprites/spriteSheetTesting/ShootNoFire.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/sprites/spriteSheetTesting/spriteSheet.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/game/sprites/spriteSheetTesting2/runAttack.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/game/sprites/spriteSheetTesting2/spriteSheet.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/gameWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/gameWindow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/playScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/playScreen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/sprites/archipelago.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/sprites/archipelago.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/sprites/drawings.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/sprites/drawings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -518,7 +206,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731018790366</updated>
       <workItem from="1731019147359" duration="53673000" />
-      <workItem from="1731258803929" duration="70244000" />
+      <workItem from="1731258803929" duration="70677000" />
     </task>
     <task id="LOCAL-00001" summary="Added Welcome script">
       <option name="closed" value="true" />
@@ -560,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731292966194</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Implemented Main character which can act as a mouse&#10;&#10;Next: Implement Random level to be non finishable, add a ending screen to choose do you restart the game after finishing it, add title in playing screen, add animations upon guessing the island right,&#10;add enemies">
+      <option name="closed" value="true" />
+      <created>1731469390901</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731469390901</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,7 +280,8 @@
     <MESSAGE value="Added intro" />
     <MESSAGE value="Started working on Levels and visual representation of them" />
     <MESSAGE value="Hearts implemented - needs refining&#10;Implemented guessing - needs refining&#10;&#10;&#10;Next: Implement Random level to be non finishable, add a ending screen to choose do you restart the game after finishing it, add title in playing screen, add players, add animations upon guessing the island right" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hearts implemented - needs refining&#10;Implemented guessing - needs refining&#10;&#10;&#10;Next: Implement Random level to be non finishable, add a ending screen to choose do you restart the game after finishing it, add title in playing screen, add players, add animations upon guessing the island right" />
+    <MESSAGE value="Implemented Main character which can act as a mouse&#10;&#10;Next: Implement Random level to be non finishable, add a ending screen to choose do you restart the game after finishing it, add title in playing screen, add animations upon guessing the island right,&#10;add enemies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented Main character which can act as a mouse&#10;&#10;Next: Implement Random level to be non finishable, add a ending screen to choose do you restart the game after finishing it, add title in playing screen, add animations upon guessing the island right,&#10;add enemies" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HeightGame$drawings.coverage" NAME="drawings Coverage Results" MODIFIED="1731361966165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game/sprites" />
@@ -606,6 +303,6 @@
     <SUITE FILE_PATH="coverage/HeightGame$spriteSheet.coverage" NAME="spriteSheet Coverage Results" MODIFIED="1731461928852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game/sprites/spriteSheetTesting2" />
     <SUITE FILE_PATH="coverage/HeightGame$main.coverage" NAME="main Coverage Results" MODIFIED="1731443647314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
     <SUITE FILE_PATH="coverage/HeightGame$characterSprite.coverage" NAME="characterSprite Coverage Results" MODIFIED="1731468300902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
-    <SUITE FILE_PATH="coverage/HeightGame$gameWindow.coverage" NAME="gameWindow Coverage Results" MODIFIED="1731468984610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
+    <SUITE FILE_PATH="coverage/HeightGame$gameWindow.coverage" NAME="gameWindow Coverage Results" MODIFIED="1731469190744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
   </component>
 </project>

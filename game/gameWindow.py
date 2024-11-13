@@ -1,5 +1,6 @@
 import sys
 
+from game.endScreen import EndScreen
 from game.playScreen import PlayScreen
 from game.randomIslandGenerator import RandomIslandGenerator
 from game.sprites.archipelago import *
@@ -22,6 +23,7 @@ class Game:
 
         self.startScreen = StartScreen(self)
         self.playScreen = PlayScreen(self)
+        self.endScreen = EndScreen(self)
 
 
     def new(self):
@@ -31,6 +33,7 @@ class Game:
     def run(self):
         if self.running: self.startScreen.start()
         if self.running: self.playScreen.start()
+        if self.running: self.endScreen.start()
         pygame.quit()
 
 
