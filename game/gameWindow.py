@@ -21,9 +21,9 @@ class Game:
         pygame.display.set_caption(TITLE)
         self.clock = pygame.time.Clock()
 
-        self.startScreen = StartScreen(self)
-        self.playScreen = PlayScreen(self)
-        self.endScreen = EndScreen(self)
+        self.startScreen = None
+        self.playScreen = None
+        self.endScreen = None
 
 
     def new(self):
@@ -31,11 +31,21 @@ class Game:
 
 
     def run(self):
+        self.startScreen = StartScreen(self)
         if self.running: self.startScreen.start()
-        if self.running: self.playScreen.start()
-        if self.running: self.endScreen.start()
+        while self.running:
+            self.playScreen = PlayScreen(self)
+            self.playScreen.start()
+            if self.running:
+                self.endScreen = EndScreen(self)
+                self.endScreen.start()
         pygame.quit()
 
+    def terminateGame(self):
+        self.running = False
+        self.startScreen.running = False
+        self.playScreen.running = False
+        self.endScreen.running = False
 
     def update(self):
         pass

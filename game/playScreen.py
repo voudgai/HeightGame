@@ -8,11 +8,12 @@ from game.settings import *
 from game.sprites.archipelago import Archipelago
 from game.sprites.drawings import Drawing
 from game.user import User
+from game.videosAndAnimations import FoundChestVideo
 
 
 class PlayScreen:
     def __init__(self, game_window):
-        self.game_window = game_window # whole window on which game is being played
+        self.gameWindow = game_window # whole window on which game is being played
         self.display_board = game_window.display # display to draw on, part of the window
         self.background = Drawing(0,0,play_screen_background_image) # drawing of background image
         self.running = True
@@ -27,24 +28,40 @@ class PlayScreen:
         self.user = User()
         self.font = pygame.font.Font('../assets/Minecraft.ttf', 14)
         self.pressEnterToSubmit_text = self.font.render('PRESS ENTER TO SUBMIT', True,DARKGREY, LIGHTGREY)
+        self.mainCharacter = CharacterSprite(main_character_spawn_X,main_character_spawn_Y)
+        self.foundChestVideo = FoundChestVideo(LEVEL_WIDTH // 2, LEVEL_HEIGHT // 2, self.gameWindow)
 
-        self.mainCharacter = CharacterSprite(80,80)
+
+    def terminateGame(self):
+        if self.currentSound is not None: self.currentSound.stop()
+        self.gameWindow.terminateGame()
+
+    def terminatePlayScreen(self):
+        if self.currentSound is not None: self.currentSound.stop()
+        self.running = False
+
+    def activatePlayScreen(self):
+        self.running = True
+
 
     def populateLevels(self):
         mapFromNordeus = True
         for i in range(0, self.numOfLevels):
-            self.levels.append(Level(mapFromNordeus, i + 1, level_icons_coordinates[i][0], level_icons_coordinates[i][1]))
+            #for the last level we want it to be random, so we are sending True as i == self.numOfLevels, and each time it starts it will form other archipelago
+            boolRandom = (i == self.numOfLevels - 1)
+            self.levels.append(Level(mapFromNordeus, i + 1, level_icons_coordinates[i][0], level_icons_coordinates[i][1], boolRandom))
             #mapFromNordeus = not mapFromNordeus
 
 
     def start(self):
+        self.activatePlayScreen()
         self.updateSound()
         while self.running:
-            self.game_window.clock.tick(FPS)
+            self.gameWindow.clock.tick(FPS)
             self.events()
             self.draw()
             pygame.display.flip()
-        pygame.quit()
+        # pygame.quit()
 
     def updateSound(self):
         if self.currentSound is not None: self.currentSound.stop()
@@ -53,19 +70,24 @@ class PlayScreen:
         else:
             self.currentSound = self.levelsInstrumentals[random.randint(1,NUM_OF_INSTRUMENTALS - 1)]
         self.currentSound.play(1000000)
+        self.currentSound.set_volume(0.1)
 
     def events(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                self.running = False
-                self.game_window.running = False
+                self.terminateGame()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 self.handleClick(pygame.mouse.get_pos(), event.button)
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RETURN or event.key == pygame.K_KP_ENTER:
                     if self.levelSelected != self.levels[0]:
-                        self.handleSubmission()
+                        # we pressed enter on level to submit
+                        xCh, yCh = self.mainCharacter.getCoordinates()
+                        if self.levels[0].checkActivation(xCh, yCh):
+                            self.changeLevel(0)
+                        else: self.handleSubmission()
                     else:
+                        # we pressed enter on selector to select a level, so we can act as if it was mouse click
                         self.handleClick(self.mainCharacter.getCoordinates(), 1)
 
 
@@ -82,17 +104,22 @@ class PlayScreen:
         if keys[pygame.K_DOWN]:
             dy += movY
         self.mainCharacter.move(dx, dy , self.display_board)
+        if self.levelSelected != self.levels[0]:
+            xCh, yCh = self.mainCharacter.getCoordinates()
+            if self.levelSelected.handleClick(xCh, yCh, 1):
+                print("Land!!!")
+            else:
+                print("Not land!")
 
 
     def handleSubmission(self):
         print("Enter pressed")
-        if not self.levelSelected.checkSolution():
-            self.user.looseHeart()
+        if not self.levelSelected.checkSolution(self.foundChestVideo):
+            self.user.looseHeart(self.gameWindow)
             if self.user.getNumOfHearts() <= 0:
-                self.running = False  # TODO
+                self.terminatePlayScreen() # TODO
         else:
             self.levelSelected.setFinishedTo(True)
-            self.levelSelected.resetLevel()
             self.changeLevel(0)
 
 
@@ -101,40 +128,44 @@ class PlayScreen:
         lvlXLeft, lvlXRight = MAP_OFFSET_X, LEVEL_WIDTH + MAP_OFFSET_X
         lvlYUp, lvlYDown = MAP_OFFSET_Y, LEVEL_HEIGHT + MAP_OFFSET_Y
         if self.levelSelected != self.levels[0] and lvlXLeft <= mouse_x < lvlXRight and lvlYUp <= mouse_y < lvlYDown:
+            # we are in some level other than selector and we clicked inside of map
             self.levelSelected.handleClick(mouse_x, mouse_y, mouseButton)
             return
-        print("UGRADI OBRADU KLIKA ZA PLAYSCREEN") # here we can potentially check for every button is it clicked
-        if self.levelSelected == self.levels[0]:
+        elif self.levelSelected != self.levels[0]:
+            # maybe we pressed return to map
+            if self.levels[0].checkActivation(mouse_x, mouse_y):
+                # self.levelSelected.resetLevel()
+                self.changeLevel(0)
+        elif self.levelSelected == self.levels[0]:
+            # we are inside of selector level and we are checking for what we clicked
             for i in range(1, self.numOfLevels + 1):
                 if self.levels[i].checkActivation(mouse_x, mouse_y):
-                    self.levelSelected.resetLevel()
+                    # self.levelSelected.resetLevel()
                     self.changeLevel(i)
                     break
-        else: # we pressed return to map
-            if self.levels[0].checkActivation(mouse_x, mouse_y):
-                self.levelSelected.resetLevel()
-                self.changeLevel(0)
+        print("UGRADI OBRADU KLIKA ZA PLAYSCREEN") # here we can potentially check for every button is it clicked
 
 
     def draw(self):
         self.background.draw(self.display_board)
-        if self.levelSelected != self.levels[0]:
+        if self.levelSelected != self.levels[0]: # we are not on selector of levels
             self.levelSelected.drawLevel(self.display_board.subsurface([MAP_OFFSET_X, MAP_OFFSET_Y, MAP_OFFSET_X + LEVEL_WIDTH, MAP_OFFSET_Y + LEVEL_HEIGHT]))
-            self.levels[0].drawIcon(self.display_board)
+            self.levels[0].drawIcon(self.display_board) # draw back to map icon
             self.display_board.blit(self.pressEnterToSubmit_text, (WINDOW_WIDTH // 2 - self.pressEnterToSubmit_text.get_width() // 2, WINDOW_HEIGHT - MAP_OFFSET_Y // 2 - 25))
-        else:
+        else: # otherwise, draw every icon for every level so we can acces them
             for i in range(1,self.numOfLevels + 1):
                 self.levels[i].drawIcon(self.display_board)
-        self.user.draw(self.display_board)
-        self.updateMainCharacter()
+        self.user.draw(self.display_board) # draw users health bar
+        self.updateMainCharacter() # draw main character
 
 
     def changeLevel(self, levelId):
-        if not 0 <= levelId < len(self.levels): return False
-        if self.levelSelected == self.levels[levelId]: return True
+        if not 0 <= levelId < len(self.levels): return False # cannot change level to that
+        if self.levelSelected == self.levels[levelId]: return True # already set to that level
+        self.levelSelected.resetLevel()
         self.levelSelected = self.levels[levelId]
         self.updateSound()
-        return True
+        return True # changed level
 
 
 
@@ -144,17 +175,22 @@ class PlayScreen:
 
 
 class Level:
-    def __init__(self, mapFromNordeus, levelId, levelIdX, levelIdY): #
+    def __init__(self, mapFromNordeus, levelId, levelIdX, levelIdY, boolRandom): #
         self.finishedLevelIcon = Drawing(levelIdX, levelIdY, finished_level_icon_image)
         self.levelIcon = Drawing(levelIdX, levelIdY, level_icon_images[levelId])
         self.levelIconX = levelIdX # idX of icon for this levels number
         self.levelIconY = levelIdY # idY of icon for this levels number
         self.levelOver = False
         self.elevationLegendDrawing = Drawing(LEVEL_WIDTH + 10, LEVEL_HEIGHT // 2 - elevation_legend_image.get_height() // 2, elevation_legend_image)
+        self.randomEveryTimeActivated = boolRandom
+        self.formArchipelago(mapFromNordeus)
 
+
+    def formArchipelago(self, mapFromNordeus):
         if mapFromNordeus: heightLevelString = requests.get(GET_REQ_LINK).text
         else: heightLevelString = RandomIslandGenerator.generate_distinct_islands_map(30, 1000, 10)
         self.archipelago = Archipelago(heightLevelString)
+
 
     def checkActivation(self, mouse_x, mouse_y):
         xLeft, xRight = (self.levelIconX), (self.levelIconX + self.levelIcon.image.get_width())
@@ -179,19 +215,26 @@ class Level:
         mouse_y //= TILESIZE
 
         if mouseButton == 1: # left button click
-            self.archipelago.selectIslandAt(mouse_x, mouse_y)
+            return self.archipelago.selectIslandAt(mouse_x, mouse_y) # return True if hit an island, else it hit the water so returns False
         else: # right button click
-            self.archipelago.selectIslandAt(mouse_x, mouse_y)
+            return self.archipelago.selectIslandAt(mouse_x, mouse_y)
 
-    def checkSolution(self):
+    def checkSolution(self, foundChestVideo):
         if self.archipelago.isHighestSelected():
             self.levelOver = True
+            foundChestVideo.start()
             return True
         return False
 
 
     def resetLevel(self):
         self.archipelago.resetArchipelago()
+
+        if self.randomEveryTimeActivated:
+            # if this is the random level, every time player quits this level, refresh the map
+            print("exited random level")
+            self.formArchipelago(True)
+            self.levelOver = False
 
     def setFinishedTo(self, finished):
         self.levelOver = finished

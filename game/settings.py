@@ -7,6 +7,11 @@ import os
 
 import pygame
 from pyvidplayer2 import VideoPlayer, Video
+main_character_spawn_X = 160
+main_character_spawn_Y = 205
+main_character_runningR_path = "../assets/warriors_pack/Warrior_1/Run.png"
+main_character_runningL_path = "../assets/warriors_pack/Warrior_1/RunLeft.png"
+main_character_standing_path = "../assets/warriors_pack/Warrior_1/Idle.png"
 
 GET_REQ_LINK = "https://jobfair.nordeus.com/jf24-fullstack-challenge/test"
 
@@ -127,5 +132,15 @@ heart_placeholder_image1 = pygame.transform.scale(pygame.image.load(os.path.join
 heart_placeholder_image2 = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "heart_placeholder2.png")),(150,50))
 heart_placeholder_image3 = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "heart_placeholder3.png")),(150,50))
 
+loose_heart_video = Video("../assets/heart_lost_animation.mp4")
+chest_found_video = Video("../assets/chest_found_video.mp4")
+
 SCORE_PLACEHOLDER_X_OFFS = MAP_OFFSET_X
 SCORE_PLACEHOLDER_Y_OFFS = 50
+
+
+end_screen_instrumental = pygame.mixer.Sound("../assets/ending_scene_music.mp3")
+end_screen_background = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "dark_end_pirate_map_3.jpg")), (WINDOW_WIDTH, WINDOW_WIDTH))
+restart_button_image = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "reset_button.png")), (225,75))
+play_button_image = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "play_button.png")), (225,75))
+quit_button_image = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "quit_button.png")), (225,75))

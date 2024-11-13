@@ -1,3 +1,4 @@
+from game.videosAndAnimations import LooseHeartVideo
 from game.settings import *
 from game.sprites.drawings import Drawing
 
@@ -6,9 +7,13 @@ class User:
     def __init__(self):
         self.heartsPH = HeartPlaceholder(WINDOW_WIDTH - HEARTS_PLACEHOLDER_X_OFFS, WINDOW_HEIGHT - HEARTS_PLACEHOLDER_Y_OFFS )
         self.scorePH = ScorePlaceholder(0 + SCORE_PLACEHOLDER_X_OFFS, WINDOW_HEIGHT - SCORE_PLACEHOLDER_Y_OFFS, 0)
+        self.looseHeartAnimation = None
 
-    def looseHeart(self):
+    def looseHeart(self, game_window):
         self.heartsPH.looseHeart()
+        if self.looseHeartAnimation is None:
+            self.looseHeartAnimation = LooseHeartVideo(game_window.winWidth // 2, game_window.winHeight // 2, game_window)
+        self.looseHeartAnimation.start()
 
     def gainHeart(self):
         self.heartsPH.gainHeart()

@@ -3,11 +3,13 @@ import os
 import pygame
 import pygamepal
 
+from game.settings import main_character_runningR_path, main_character_runningL_path, main_character_standing_path
+
 
 class CharacterSprite:
-    pathRunningRight = "../assets/warriors_pack/Warrior_1/Run.png"
-    pathRunningLeft = "../assets/warriors_pack/Warrior_1/RunLeft.png"
-    pathStanding = "../assets/warriors_pack/Warrior_1/Idle.png"
+    pathRunningRight = main_character_runningR_path
+    pathRunningLeft = main_character_runningL_path
+    pathStanding = main_character_standing_path
     def __init__(self, x, y):
         self.x, self.y = x, y
         self.movX, self.movY = 1, 1
