@@ -1,5 +1,6 @@
 import sys
 
+from game.charactersScreen import ChooseCharacterScreen
 from game.endScreen import EndScreen
 from game.playScreen import PlayScreen
 from game.randomIslandGenerator import RandomIslandGenerator
@@ -21,6 +22,7 @@ class Game:
         pygame.display.set_caption(TITLE)
         self.clock = pygame.time.Clock()
 
+        self.chooseCharacterScreen = None
         self.startScreen = None
         self.playScreen = None
         self.endScreen = None
@@ -32,9 +34,13 @@ class Game:
 
     def run(self):
         self.startScreen = StartScreen(self)
-        if self.running: self.startScreen.start()
+        self.startScreen.start()
+        if self.running:
+            self.chooseCharacterScreen = ChooseCharacterScreen(self)
+            character = self.chooseCharacterScreen.start()
+            boolViking = (character == 1)
         while self.running:
-            self.playScreen = PlayScreen(self)
+            self.playScreen = PlayScreen(self, boolViking)
             self.playScreen.start()
             if self.running:
                 self.endScreen = EndScreen(self)
@@ -43,9 +49,14 @@ class Game:
 
     def terminateGame(self):
         self.running = False
-        self.startScreen.running = False
-        self.playScreen.running = False
-        self.endScreen.running = False
+        if self.chooseCharacterScreen:
+            self.chooseCharacterScreen.running = False
+        if self.startScreen:
+            self.startScreen.running = False
+        if self.playScreen:
+            self.playScreen.running = False
+        if self.endScreen:
+            self.endScreen.running = False
 
     def update(self):
         pass

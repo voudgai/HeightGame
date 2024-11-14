@@ -12,7 +12,7 @@ from game.videosAndAnimations import FoundChestVideo
 
 
 class PlayScreen:
-    def __init__(self, game_window):
+    def __init__(self, game_window, boolViking):
         self.gameWindow = game_window # whole window on which game is being played
         self.display_board = game_window.display # display to draw on, part of the window
         self.background = Drawing(0,0,play_screen_background_image) # drawing of background image
@@ -28,7 +28,7 @@ class PlayScreen:
         self.user = User()
         self.font = pygame.font.Font('../assets/Minecraft.ttf', 14)
         self.pressEnterToSubmit_text = self.font.render('PRESS ENTER TO SUBMIT', True,DARKGREY, LIGHTGREY)
-        self.mainCharacter = CharacterSprite(main_character_spawn_X,main_character_spawn_Y)
+        self.mainCharacter = CharacterSprite(viking_character_spawn_X, viking_character_spawn_Y, boolViking)
         self.foundChestVideo = FoundChestVideo(LEVEL_WIDTH // 2, LEVEL_HEIGHT // 2, self.gameWindow)
 
 
@@ -70,7 +70,7 @@ class PlayScreen:
         else:
             self.currentSound = self.levelsInstrumentals[random.randint(1,NUM_OF_INSTRUMENTALS - 1)]
         self.currentSound.play(1000000)
-        self.currentSound.set_volume(0.1)
+        self.currentSound.set_volume(0.4)
 
     def events(self):
         for event in pygame.event.get():
