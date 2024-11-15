@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="157630dd-4fb8-49d0-9791-f8bbf6a5b1ff" name="Changes" comment="Implemented animations and ending screen&#10;&#10;Next: Implement Random level to be non finishable,&#10;add enemies">
-      <change afterPath="$PROJECT_DIR$/game/charactersScreen.py" afterDir="false" />
+    <list default="true" id="157630dd-4fb8-49d0-9791-f8bbf6a5b1ff" name="Changes" comment="Implemented one more character, Nordian, and characters choosing&#10;&#10;Next:&#10;add enemies">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/warriors_pack/Warrior_2/Idle.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_2/Idle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/warriors_pack/Warrior_2/Protect.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/warriors_pack/Warrior_2/Protect.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/characterSprite.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/characterSprite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/gameWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/gameWindow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/choose_character.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/assets/choose_character.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pirate_map_3.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/game/playScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/playScreen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/videosAndAnimations.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/videosAndAnimations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/startScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/startScreen.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +117,7 @@
       <workItem from="1731019147359" duration="53673000" />
       <workItem from="1731258803929" duration="83497000" />
       <workItem from="1731539428739" duration="994000" />
-      <workItem from="1731585301337" duration="8390000" />
+      <workItem from="1731585301337" duration="17513000" />
     </task>
     <task id="LOCAL-00001" summary="Added Welcome script">
       <option name="closed" value="true" />
@@ -186,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731529293630</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Implemented one more character, Nordian, and characters choosing&#10;&#10;Next:&#10;add enemies">
+      <option name="closed" value="true" />
+      <created>1731597443220</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1731597443220</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +217,8 @@
     <MESSAGE value="Hearts implemented - needs refining&#10;Implemented guessing - needs refining&#10;&#10;&#10;Next: Implement Random level to be non finishable, add a ending screen to choose do you restart the game after finishing it, add title in playing screen, add players, add animations upon guessing the island right" />
     <MESSAGE value="Implemented Main character which can act as a mouse&#10;&#10;Next: Implement Random level to be non finishable, add a ending screen to choose do you restart the game after finishing it, add title in playing screen, add animations upon guessing the island right,&#10;add enemies" />
     <MESSAGE value="Implemented animations and ending screen&#10;&#10;Next: Implement Random level to be non finishable,&#10;add enemies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented animations and ending screen&#10;&#10;Next: Implement Random level to be non finishable,&#10;add enemies" />
+    <MESSAGE value="Implemented one more character, Nordian, and characters choosing&#10;&#10;Next:&#10;add enemies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented one more character, Nordian, and characters choosing&#10;&#10;Next:&#10;add enemies" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HeightGame$drawings.coverage" NAME="drawings Coverage Results" MODIFIED="1731361966165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game/sprites" />
@@ -235,6 +241,6 @@
     <SUITE FILE_PATH="coverage/HeightGame$spriteSheet.coverage" NAME="spriteSheet Coverage Results" MODIFIED="1731461928852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game/sprites/spriteSheetTesting2" />
     <SUITE FILE_PATH="coverage/HeightGame$main.coverage" NAME="main Coverage Results" MODIFIED="1731443647314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
     <SUITE FILE_PATH="coverage/HeightGame$characterSprite.coverage" NAME="characterSprite Coverage Results" MODIFIED="1731590209075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
-    <SUITE FILE_PATH="coverage/HeightGame$gameWindow.coverage" NAME="gameWindow Coverage Results" MODIFIED="1731597066067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
+    <SUITE FILE_PATH="coverage/HeightGame$gameWindow.coverage" NAME="gameWindow Coverage Results" MODIFIED="1731629471730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
   </component>
 </project>

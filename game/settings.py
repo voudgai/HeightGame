@@ -99,11 +99,11 @@ def getHeightSignImage(height):
     print("Height sign image not implemented yet")
     return chest_full_with_gold
 
-intro_video = Video("../intro_video_and_material/Pirates_game_INTRO2.mp4")
+intro_video = Video("../intro_video_and_material/Pirates_game_INTRO_FINAL.mp4")
 skip_button_intro_image = pygame.transform.scale(pygame.image.load(os.path.join("../intro_video_and_material", "skip_button_intro.png")),(100,50))
 start_screen_background_image = pygame.transform.scale(pygame.image.load(os.path.join("../intro_video_and_material", "welcome_picture.png")), (WINDOW_WIDTH, WINDOW_WIDTH))
 start_button_image = pygame.transform.scale(pygame.image.load(os.path.join("../intro_video_and_material", "start_button_retro.png")), (150,50))
-play_screen_background_image = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "pirate_map_3.jpg")), (WINDOW_WIDTH,WINDOW_HEIGHT))
+play_screen_background_image = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "pirate_map_3.png")), (WINDOW_WIDTH,WINDOW_HEIGHT))
 
 choose_character_video = Video("../assets/choose_character.mp4")
 empty_image = pygame.transform.scale(pygame.image.load(os.path.join("../assets", "black_line0.png")), (120,150))

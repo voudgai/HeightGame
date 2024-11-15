@@ -12,7 +12,7 @@ class IntroVideo:
         self.introVid.resize((width, height))
         self.game_window = game_window
         self.introPlaying = False
-        self.skip_button = Button(width // 1.5, height - 100,skip_button_intro_image)
+        self.skip_button = Button(width // 1.5, height - 70,skip_button_intro_image)
 
     def start(self):
         print("play intro video")

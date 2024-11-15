@@ -30,6 +30,7 @@ class PlayScreen:
         self.pressEnterToSubmit_text = self.font.render('PRESS ENTER TO SUBMIT', True,DARKGREY, LIGHTGREY)
         self.mainCharacter = CharacterSprite(viking_character_spawn_X, viking_character_spawn_Y, boolViking)
         self.foundChestVideo = FoundChestVideo(LEVEL_WIDTH // 2, LEVEL_HEIGHT // 2, self.gameWindow)
+        self.characterOnIsland = False # used for checking if main character is currently on any island
 
 
     def terminateGame(self):
@@ -61,7 +62,7 @@ class PlayScreen:
             self.events()
             self.draw()
             pygame.display.flip()
-        # pygame.quit()
+
 
     def updateSound(self):
         if self.currentSound is not None: self.currentSound.stop()
@@ -80,15 +81,7 @@ class PlayScreen:
                 self.handleClick(pygame.mouse.get_pos(), event.button)
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RETURN or event.key == pygame.K_KP_ENTER:
-                    if self.levelSelected != self.levels[0]:
-                        # we pressed enter on level to submit
-                        xCh, yCh = self.mainCharacter.getCoordinates()
-                        if self.levels[0].checkActivation(xCh, yCh):
-                            self.changeLevel(0)
-                        else: self.handleSubmission()
-                    else:
-                        # we pressed enter on selector to select a level, so we can act as if it was mouse click
-                        self.handleClick(self.mainCharacter.getCoordinates(), 1)
+                    self.handleEnter()
 
 
     def updateMainCharacter(self):
@@ -107,44 +100,69 @@ class PlayScreen:
         if self.levelSelected != self.levels[0]:
             xCh, yCh = self.mainCharacter.getCoordinates()
             if self.levelSelected.handleClick(xCh, yCh, 1):
-                print("Land!!!")
+                self.characterOnIsland = True
             else:
-                print("Not land!")
+                self.characterOnIsland = False
+
+    def handleEnter(self):
+        xCh, yCh = self.mainCharacter.getCoordinates()
+        if self.levelSelected != self.levels[0]:
+            # we pressed enter on level to submit or to return to map
+            if self.levels[0].checkActivation(xCh, yCh):
+                self.changeLevel(0)
+            else:
+                self.handleSubmissionByCharacter()
+            return
+        # we are on level selector since we would return if we were on some other level
+        for i in range(1, self.numOfLevels + 1):
+            # for each level, check if we clicked on its icon for activation
+            if self.levels[i].checkActivation(xCh, yCh):
+                self.changeLevel(i) # if we did, start that level
+                break
 
 
-    def handleSubmission(self):
-        print("Enter pressed")
-        if not self.levelSelected.checkSolution(self.foundChestVideo):
-            self.user.looseHeart(self.gameWindow)
-            if self.user.getNumOfHearts() <= 0:
-                self.terminatePlayScreen() # TODO
-        else:
-            self.levelSelected.setFinishedTo(True)
-            self.changeLevel(0)
+    def handleSubmissionByCharacter(self):
+        if self.characterOnIsland:
+            # since this submission is by character, he is already on some island
+            self.submitSelectedIsland() # so we can call this function
 
 
     def handleClick(self, mouseCoord, mouseButton):
         mouse_x, mouse_y = mouseCoord
         lvlXLeft, lvlXRight = MAP_OFFSET_X, LEVEL_WIDTH + MAP_OFFSET_X
         lvlYUp, lvlYDown = MAP_OFFSET_Y, LEVEL_HEIGHT + MAP_OFFSET_Y
-        if self.levelSelected != self.levels[0] and lvlXLeft <= mouse_x < lvlXRight and lvlYUp <= mouse_y < lvlYDown:
-            # we are in some level other than selector and we clicked inside of map
-            self.levelSelected.handleClick(mouse_x, mouse_y, mouseButton)
-            return
-        elif self.levelSelected != self.levels[0]:
-            # maybe we pressed return to map
-            if self.levels[0].checkActivation(mouse_x, mouse_y):
-                # self.levelSelected.resetLevel()
+        if self.levelSelected != self.levels[0]:
+            # we are in some level other than selector
+            if lvlXLeft <= mouse_x < lvlXRight and lvlYUp <= mouse_y < lvlYDown:
+                # we clicked inside the map
+                if self.levelSelected.handleClick(mouse_x, mouse_y, mouseButton):
+                    # we clicked on some island and want to check if thats the solution
+                    self.submitSelectedIsland()
+            elif self.levels[0].checkActivation(mouse_x, mouse_y):
+                # level selector icon activated - we pressed return to map
                 self.changeLevel(0)
-        elif self.levelSelected == self.levels[0]:
-            # we are inside of selector level and we are checking for what we clicked
-            for i in range(1, self.numOfLevels + 1):
-                if self.levels[i].checkActivation(mouse_x, mouse_y):
-                    # self.levelSelected.resetLevel()
-                    self.changeLevel(i)
-                    break
-        print("UGRADI OBRADU KLIKA ZA PLAYSCREEN") # here we can potentially check for every button is it clicked
+            return
+        # we are on level selector since we would return from function otherwise
+        for i in range(1, self.numOfLevels + 1):
+            # for each level, check if we clicked on its icon for activation
+            if self.levels[i].checkActivation(mouse_x, mouse_y):
+                self.changeLevel(i) # if we did, start that level
+                break
 
+    def submitSelectedIsland(self):
+        # returns True if submission is correct, False otherwise
+        # firstly island must be selected before this function is called
+        if self.levelSelected.checkSolution(self.foundChestVideo):
+            self.emergencyDrawWithFlip()  # so we can update the look of the map before submission
+            self.levelSelected.setFinishedTo(True) # this level is finished
+            self.changeLevel(0) # return to level selector
+            return True # good solution, return True
+        # since we got here solution is wrong
+        self.user.looseHeart(self.gameWindow) # deduct one heart
+        if self.user.getNumOfHearts() <= 0:
+            # number of hearts is 0 or less - end of the game
+            self.terminatePlayScreen() # game over
+        return False # bad solution, return False
 
     def draw(self):
         self.background.draw(self.display_board)
@@ -152,19 +170,33 @@ class PlayScreen:
             self.levelSelected.drawLevel(self.display_board.subsurface([MAP_OFFSET_X, MAP_OFFSET_Y, MAP_OFFSET_X + LEVEL_WIDTH, MAP_OFFSET_Y + LEVEL_HEIGHT]))
             self.levels[0].drawIcon(self.display_board) # draw back to map icon
             self.display_board.blit(self.pressEnterToSubmit_text, (WINDOW_WIDTH // 2 - self.pressEnterToSubmit_text.get_width() // 2, WINDOW_HEIGHT - MAP_OFFSET_Y // 2 - 25))
-        else: # otherwise, draw every icon for every level so we can acces them
+        else: # otherwise, draw every icon for every level so we can access them
             for i in range(1,self.numOfLevels + 1):
                 self.levels[i].drawIcon(self.display_board)
         self.user.draw(self.display_board) # draw users health bar
         self.updateMainCharacter() # draw main character
 
+    def emergencyDrawWithFlip(self):
+        print("Emegency drawing")
+        self.background.draw(self.display_board)
+        if self.levelSelected != self.levels[0]: # we are not on selector of levels
+            self.levelSelected.drawLevel(self.display_board.subsurface([MAP_OFFSET_X, MAP_OFFSET_Y, MAP_OFFSET_X + LEVEL_WIDTH, MAP_OFFSET_Y + LEVEL_HEIGHT]))
+            self.levels[0].drawIcon(self.display_board) # draw back to map icon
+            self.display_board.blit(self.pressEnterToSubmit_text, (WINDOW_WIDTH // 2 - self.pressEnterToSubmit_text.get_width() // 2, WINDOW_HEIGHT - MAP_OFFSET_Y // 2 - 25))
+        else: # otherwise, draw every icon for every level so we can access them
+            for i in range(1,self.numOfLevels + 1):
+                self.levels[i].drawIcon(self.display_board)
+        self.user.draw(self.display_board) # draw users health bar
+        self.mainCharacter.move(0, 0 , self.display_board)
+        pygame.display.flip()
+
 
     def changeLevel(self, levelId):
         if not 0 <= levelId < len(self.levels): return False # cannot change level to that
         if self.levelSelected == self.levels[levelId]: return True # already set to that level
-        self.levelSelected.resetLevel()
-        self.levelSelected = self.levels[levelId]
-        self.updateSound()
+        self.levelSelected.resetLevel() # reset selected island on the level
+        self.levelSelected = self.levels[levelId] # change to new level
+        self.updateSound() # update soundtrack
         return True # changed level
 
 
