@@ -152,8 +152,9 @@ class PlayScreen:
     def submitSelectedIsland(self):
         # returns True if submission is correct, False otherwise
         # firstly island must be selected before this function is called
-        if self.levelSelected.checkSolution(self.foundChestVideo):
-            self.emergencyDrawWithFlip()  # so we can update the look of the map before submission
+        self.emergencyDrawWithFlip()  # so we can update the look of the map before submission
+        if self.levelSelected.checkSolution():
+            self.foundChestVideo.start()
             self.levelSelected.setFinishedTo(True) # this level is finished
             self.changeLevel(0) # return to level selector
             return True # good solution, return True
@@ -251,10 +252,10 @@ class Level:
         else: # right button click
             return self.archipelago.selectIslandAt(mouse_x, mouse_y)
 
-    def checkSolution(self, foundChestVideo):
+    def checkSolution(self, foundChestVideo = None): # fix this if you want to use foundChestVideo here
         if self.archipelago.isHighestSelected():
             self.levelOver = True
-            foundChestVideo.start()
+            # foundChestVideo.start()
             return True
         return False
 
