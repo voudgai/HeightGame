@@ -8,3 +8,5 @@ def main():
     game.run()
     pygame.quit()
     sys.exit()
+
+main()

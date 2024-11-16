@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="157630dd-4fb8-49d0-9791-f8bbf6a5b1ff" name="Changes" comment="Fixed intro and character choosing&#10;&#10;- Need to remove foundChestVid.start() from Level.checkSolution() so i can update map before submitting solution&#10;&#10;Next:&#10;add enemies">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/gameWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/gameWindow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +113,7 @@
       <workItem from="1731258803929" duration="83497000" />
       <workItem from="1731539428739" duration="994000" />
       <workItem from="1731585301337" duration="19754000" />
-      <workItem from="1731698238606" duration="10917000" />
+      <workItem from="1731698238606" duration="11686000" />
     </task>
     <task id="LOCAL-00001" summary="Added Welcome script">
       <option name="closed" value="true" />
@@ -205,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731632781349</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fixed intro and character choosing&#10;&#10;- Need to remove foundChestVid.start() from Level.checkSolution() so i can update map before submitting solution&#10;&#10;Next:&#10;add enemies">
+      <option name="closed" value="true" />
+      <created>1731773171144</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1731773171144</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,8 +260,8 @@
     <SUITE FILE_PATH="coverage/HeightGame$game.coverage" NAME="game Coverage Results" MODIFIED="1731110821348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
     <SUITE FILE_PATH="coverage/HeightGame$endScreen.coverage" NAME="endScreen Coverage Results" MODIFIED="1731468601139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
     <SUITE FILE_PATH="coverage/HeightGame$spriteSheet.coverage" NAME="spriteSheet Coverage Results" MODIFIED="1731461928852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game/sprites/spriteSheetTesting2" />
-    <SUITE FILE_PATH="coverage/HeightGame$main.coverage" NAME="main Coverage Results" MODIFIED="1731443647314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
     <SUITE FILE_PATH="coverage/HeightGame$characterSprite.coverage" NAME="characterSprite Coverage Results" MODIFIED="1731590209075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
+    <SUITE FILE_PATH="coverage/HeightGame$main.coverage" NAME="main Coverage Results" MODIFIED="1731773265387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
     <SUITE FILE_PATH="coverage/HeightGame$gameWindow.coverage" NAME="gameWindow Coverage Results" MODIFIED="1731766115799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
   </component>
 </project>
