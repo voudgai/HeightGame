@@ -2,7 +2,7 @@
 
 Game can be started from ./game/main.py
 
-List of requirements is in ./game/requirements.txt
+List of requirements is in ./requirements.txt
 
 Virtual enviorment used was venv.
 
