@@ -40,12 +40,12 @@ class Island:
 
 
     def selectIsland(self):
-        print("Selected island\n")
+        #print("Selected island\n")
         self.selected = True
 
 
     def unselectIsland(self):
-        print("Unselected island\n")
+        #print("Unselected island\n")
         self.selected = False
 
 

@@ -178,7 +178,7 @@ class PlayScreen:
         self.updateMainCharacter() # draw main character
 
     def emergencyDrawWithFlip(self):
-        print("Emegency drawing")
+        #print("Emegency drawing")
         self.background.draw(self.display_board)
         if self.levelSelected != self.levels[0]: # we are not on selector of levels
             self.levelSelected.drawLevel(self.display_board.subsurface([MAP_OFFSET_X, MAP_OFFSET_Y, MAP_OFFSET_X + LEVEL_WIDTH, MAP_OFFSET_Y + LEVEL_HEIGHT]))

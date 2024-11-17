@@ -342,8 +342,8 @@ class RandomIslandGenerator:
         return '\n'.join(' '.join(str(cell) for cell in row) for row in terrain)
 
     # Example usage:
-    terrain = generate_archipelago_map(size=30, max_height=1000, num_islands=4)
-    formatted_map = format_map(terrain)
-    print(formatted_map)
+    #terrain = generate_archipelago_map(size=30, max_height=1000, num_islands=4)
+    #formatted_map = format_map(terrain)
+    #print(formatted_map)
 
     # Generate and format a map

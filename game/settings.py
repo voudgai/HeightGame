@@ -96,7 +96,7 @@ chest_full_with_gold = pygame.transform.scale(pygame.image.load(os.path.join("..
 
 
 def getHeightSignImage(height):
-    print("Height sign image not implemented yet")
+    #print("Height sign image not implemented yet")
     return chest_full_with_gold
 
 intro_video = Video("../intro_video_and_material/Pirates_game_INTRO_FINAL.mp4")
