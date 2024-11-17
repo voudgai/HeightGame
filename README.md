@@ -8,5 +8,5 @@ Virtual enviorment used was venv.
 
 Python version is 3.11
 
-pip version is 24.0
+
 
