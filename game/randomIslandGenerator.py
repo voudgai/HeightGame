@@ -7,6 +7,13 @@ from xml.etree.ElementTree import tostring
 
 from game.sprites.archipelago import *
 
+"""
+ONLY PART OF CODE GENERATED WITH LLM, 
+THIS WAS FOR CODE TESTING WHEN THERE WAS NO INTERNET CONNECTION
+AVAILABLE. IT WOULD GENERATE ARCHIPELAGOS THAT MADE SENSE AND NOT
+JUST RANDOM HEIGHTS MATRIX.
+
+"""
 class RandomIslandGenerator:
     def __init__(self):
         pass

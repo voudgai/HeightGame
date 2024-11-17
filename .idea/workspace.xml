@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="157630dd-4fb8-49d0-9791-f8bbf6a5b1ff" name="Changes" comment="Fixed intro and character choosing&#10;&#10;- Need to remove foundChestVid.start() from Level.checkSolution() so i can update map before submitting solution&#10;&#10;Next:&#10;add enemies">
-      <change beforePath="$PROJECT_DIR$/game/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/randomIslandGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/randomIslandGenerator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +114,7 @@
       <workItem from="1731258803929" duration="83497000" />
       <workItem from="1731539428739" duration="994000" />
       <workItem from="1731585301337" duration="19754000" />
-      <workItem from="1731698238606" duration="11686000" />
+      <workItem from="1731698238606" duration="17918000" />
     </task>
     <task id="LOCAL-00001" summary="Added Welcome script">
       <option name="closed" value="true" />
@@ -211,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731773171144</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fixed intro and character choosing&#10;&#10;- Need to remove foundChestVid.start() from Level.checkSolution() so i can update map before submitting solution&#10;&#10;Next:&#10;add enemies">
+      <option name="closed" value="true" />
+      <created>1731773284387</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1731773284387</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
